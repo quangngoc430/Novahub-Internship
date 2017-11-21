@@ -8,7 +8,7 @@ import org.junit.Test;
 public class EmployessTest {
 	
 	@Test
-	public void TestDefaultConstructor() {
+	public void testDefaultConstructor() {
 		Employee employee = new Employee();
 		employee.setId(0);
 		employee.setFirstName("Ngoc");
@@ -22,7 +22,7 @@ public class EmployessTest {
 	}
 	
 	@Test
-	public void TestConstructor() {
+	public void testConstructor() {
 		Employee employee = new Employee(1, "Ny", "Dieu", 20000000);
 		
 		assertEquals(1, employee.getId());
@@ -32,7 +32,7 @@ public class EmployessTest {
 	}
 	
 	@Test
-	public void TestSetId() {
+	public void testSetId() {
 		Employee employee = new Employee();
 		employee.setId(1);
 		
@@ -40,7 +40,14 @@ public class EmployessTest {
 	}
 	
 	@Test
-	public void TestSetFirstName() {
+	public void testGetId() {
+		Employee employee = new Employee(2, "Ngoc", "Bui", 234560);
+		
+		assertEquals(2, employee.getId());		
+	}
+	
+	@Test
+	public void testSetFirstName() {
 		Employee employee = new Employee();
 		employee.setFirstName("Ngoc");
 		
@@ -48,7 +55,14 @@ public class EmployessTest {
 	}
 	
 	@Test
-	public void TestSetLastName() {
+	public void testGetFirstName() {
+		Employee employee = new Employee(3, "Hung", "Duong", 305000);
+		
+		assertEquals("Hung", employee.getFirstName());
+	}
+	
+	@Test
+	public void testSetLastName() {
 		Employee employee = new Employee();
 		employee.setLastName("Bui Lam Quang");
 		
@@ -56,11 +70,25 @@ public class EmployessTest {
 	}
 	
 	@Test
-	public void TestSetSalary() {
+	public void testGetLastName() {
+		Employee employee = new Employee(4, "Hung", "Lee", 500000);
+		
+		assertEquals("Lee", employee.getLastName());
+	}
+	
+	@Test
+	public void testSetSalary() {
 		Employee employee = new Employee();
 		employee.setSalary(23000000);
 		
 		assertEquals(23000000, employee.getSalary());
+	}
+	
+	@Test
+	public void testGetSalary() {
+		Employee employee = new Employee(5, "Minh", "Than", 40000000);
+		
+		assertEquals(40000000, employee.getSalary());
 	}
 	
 	@Test
@@ -75,7 +103,7 @@ public class EmployessTest {
 	}
 	
 	@Test
-	public void TestRaiseSalary() {
+	public void testRaiseSalary() {
 		Employee employee = new Employee();
 		employee.setId(3);
 		employee.setFirstName("Kieu");
@@ -86,7 +114,7 @@ public class EmployessTest {
 	}
 	
 	@Test
-	public void TestToString() {
+	public void testToString() {
 		Employee employee = new Employee();
 		employee.setId(4);
 		employee.setFirstName("Minh");

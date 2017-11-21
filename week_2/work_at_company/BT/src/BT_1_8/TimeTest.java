@@ -28,7 +28,7 @@ public class TimeTest {
 	}
 	
 	@Test
-	public void TestSetSecond() {
+	public void testSetSecond() {
 		Time time = new Time();
 		time.setSecond(15);
 		
@@ -36,7 +36,14 @@ public class TimeTest {
 	}
 	
 	@Test
-	public void TestSetMinute() {
+	public void testGetSecond() {
+		Time time = new Time(13, 54, 29);
+		
+		assertEquals(29, time.getSecond());
+	}
+	
+	@Test
+	public void testSetMinute() {
 		Time time = new Time();
 		time.setMinute(5);
 		
@@ -44,7 +51,14 @@ public class TimeTest {
 	}
 	
 	@Test
-	public void TestSetHour() {
+	public void testGetMinute() {
+		Time time = new Time(19, 35, 49);
+		
+		assertEquals(35, time.getMinute());
+	}
+	
+	@Test
+	public void testSetHour() {
 		Time time = new Time();
 		time.setHour(7);
 		
@@ -52,7 +66,14 @@ public class TimeTest {
 	}
 	
 	@Test
-	public void TestSetTime() {
+	public void testGetHour() {
+		Time time = new Time(20, 45, 59);
+	
+		assertEquals(20, time.getHour());
+	}
+	
+	@Test
+	public void testSetTime() {
 		Time time = new Time();
 		time.setTime(21, 20, 19);
 		

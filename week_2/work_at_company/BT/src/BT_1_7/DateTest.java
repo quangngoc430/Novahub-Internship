@@ -19,7 +19,7 @@ public class DateTest {
 	}
 	
 	@Test
-	public void TestConstructor() {
+	public void testConstructor() {
 		Date date = new Date(1, 9, 1997);
 		
 		assertEquals(1, date.getDay());
@@ -28,7 +28,7 @@ public class DateTest {
 	}
 	
 	@Test
-	public void TestSetDay() {
+	public void testSetDay() {
 		Date date = new Date();
 		date.setDay(2);
 		
@@ -36,7 +36,14 @@ public class DateTest {
 	}
 	
 	@Test
-	public void TestSetMonth() {
+	public void testGetDay() {
+		Date date = new Date(1, 9, 1997);
+		
+		assertEquals(1, date.getDay());
+	}
+	
+	@Test
+	public void testSetMonth() {
 		Date date = new Date();
 		date.setMonth(5);
 		
@@ -44,7 +51,14 @@ public class DateTest {
 	}
 	
 	@Test
-	public void TestSetYear() {
+	public void testGetMonth() {
+		Date date = new Date(1, 9, 1997);
+		
+		assertEquals(9, date.getMonth());	
+	}
+	
+	@Test
+	public void testSetYear() {
 		Date date = new Date();
 		date.setYear(1999);
 		
@@ -52,7 +66,14 @@ public class DateTest {
 	}
 	
 	@Test
-	public void TestSetDate() {
+	public void testGetYear() {
+		Date date = new Date(1, 9, 1997);
+		
+		assertEquals(1997, date.getYear());
+	}
+	
+	@Test
+	public void testSetDate() {
 		Date date = new Date();
 		date.setDate(2, 11, 1998);
 		
@@ -62,7 +83,7 @@ public class DateTest {
 	}
 	
 	@Test
-	public void TestToString() {
+	public void testToString() {
 		Date date = new Date();
 		
 		date.setDate(1, 9, 1997);

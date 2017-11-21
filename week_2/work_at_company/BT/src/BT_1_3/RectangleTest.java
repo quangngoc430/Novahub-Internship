@@ -5,7 +5,7 @@ import static org.junit.Assert.assertEquals;
 public class RectangleTest{
 
 	@Test
-	public void TestDefaultConstructor() {	
+	public void testDefaultConstructor() {	
 		Rectangle rectangle = new Rectangle();
 		rectangle.setLength(4);
 		rectangle.setWidth(5);
@@ -15,7 +15,7 @@ public class RectangleTest{
 	}
 	
 	@Test
-	public void TestConstructor() {
+	public void testConstructor() {
 		Rectangle rectangle = new Rectangle(2, 3);
 		
 		assertEquals(rectangle.getLength(), 3, 2);
@@ -23,7 +23,7 @@ public class RectangleTest{
 	}
 	
 	@Test
-	public void TestGetLength() {
+	public void testSetLength() {
 		Rectangle rectangle = new Rectangle();
 		rectangle.setLength(2);
 		
@@ -31,7 +31,14 @@ public class RectangleTest{
 	}
 	
 	@Test
-	public void TestGetWidth() {
+	public void testGetLenght() {
+		Rectangle rectangle = new Rectangle(6, 7);
+		
+		assertEquals(6, rectangle.getLength(), 2);
+	}
+	
+	@Test
+	public void testSetWidth() {
 		Rectangle rectangle = new Rectangle();
 		rectangle.setWidth(5);
 		
@@ -39,7 +46,14 @@ public class RectangleTest{
 	}
 	
 	@Test
-	public void TestGetArea() {
+	public void testGetWidth() {
+		Rectangle rectangle = new Rectangle(3, 9);
+		
+		assertEquals(9, rectangle.getWidth(), 2);
+	}
+	
+	@Test
+	public void testGetArea() {
 		Rectangle rectangle = new Rectangle();
 		rectangle.setWidth(4);
 		rectangle.setLength(7);
@@ -57,7 +71,7 @@ public class RectangleTest{
 	}
 	
 	@Test
-	public void TestToString() {
+	public void testToString() {
 		Rectangle rectangle = new Rectangle();
 		rectangle.setWidth(4);
 		rectangle.setLength(5);

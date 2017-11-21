@@ -14,7 +14,7 @@ public class CircleTest{
 	}
 	
 	@Test
-	public void testGetRadius(){
+	public void testSetRadius(){
 		Circle circle = new Circle();
 		circle.setRadius(1.0);
 
@@ -22,15 +22,29 @@ public class CircleTest{
 	}
 
 	@Test
-	public void testGetColor(){
+	public void testGetRadius() {
+		Circle circle = new Circle(2.5, "red");
+		
+		assertEquals(2.5, circle.getRadius(), 2);
+	}
+	
+	@Test
+	public void testSetColor(){
 		Circle circle = new Circle();
 		circle.setColor("blue");
 
 		assertEquals("blue", circle.getColor());
 	}
+	
+	@Test
+	public void testGetColor() {
+		Circle circle = new Circle(6.7, "green");
+		
+		assertEquals("green", circle.getColor());
+	}
 
 	@Test
-	public void testGetArea(){
+	public void testSetArea(){
 		Circle circle = new Circle();
 		circle.setRadius(1.0);
 

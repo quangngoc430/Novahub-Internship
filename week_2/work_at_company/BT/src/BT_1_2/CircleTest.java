@@ -38,8 +38,7 @@ public class CircleTest{
 	
 	@Test
 	public void testGetRadius(){
-		Circle circle = new Circle();
-		circle.setRadius(1.0);
+		Circle circle = new Circle(1.0);
 
 		assertEquals(1.0, circle.getRadius(), 2);
 	}

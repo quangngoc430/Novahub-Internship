@@ -7,7 +7,7 @@ import org.junit.Test;
 public class AccountTest {
 	
 	@Test
-	public void TestDefaultConstructor() {
+	public void testDefaultConstructor() {
 		Account account = new Account();
 		account.setId("01");
 		account.setName("account 01");
@@ -19,7 +19,7 @@ public class AccountTest {
 	}
 	
 	@Test
-	public void TestConstructorWithTwoArguments() {
+	public void testConstructorWithTwoArguments() {
 		Account account = new Account("02", "account 02");
 		
 		assertEquals("02", account.getId());
@@ -27,7 +27,7 @@ public class AccountTest {
 	}
 	
 	@Test
-	public void TestConstructorWithThreeArguments() {
+	public void testConstructorWithThreeArguments() {
 		Account account = new Account("03", "account 03", 1000000000);
 		
 		assertEquals("03", account.getId());
@@ -36,7 +36,7 @@ public class AccountTest {
 	}
 	
 	@Test
-	public void TestSetId() {
+	public void testSetId() {
 		Account account = new Account();
 		account.setId("05");
 		
@@ -44,7 +44,14 @@ public class AccountTest {
 	}
 	
 	@Test
-	public void TestSetName() {
+	public void testGetId() {
+		Account account = new Account("01", "account 01", 20000000);
+		
+		assertEquals("01", account.getId());
+	}
+	
+	@Test
+	public void testSetName() {
 		Account account = new Account();
 		account.setName("Ngoc Bui");
 		
@@ -52,7 +59,14 @@ public class AccountTest {
 	}
 	
 	@Test
-	public void TestSetBalance() {
+	public void testGetName() {
+		Account account = new Account("01", "account 02", 35000000);
+		
+		assertEquals("account 02", account.getName());
+	}
+	
+	@Test
+	public void testSetBalance() {
 		Account account = new Account();
 		account.setBalance(250000000);
 		
@@ -60,7 +74,14 @@ public class AccountTest {
 	}
 	
 	@Test
-	public void TestCredit() {
+	public void testGetBalance() {
+		Account account = new Account("03", "quangngoc430", 45000000);
+		
+		assertEquals(45000000, account.getBalance());
+	}
+	
+	@Test
+	public void testCredit() {
 		Account account = new Account();
 		account.setId("01");
 		account.setName("Dieu Nhi");
@@ -70,7 +91,7 @@ public class AccountTest {
 	}
 	
 	@Test
-	public void TestDebit() {
+	public void testDebit() {
 		
 		// case amount < balance
 		Account account = new Account();
@@ -97,7 +118,7 @@ public class AccountTest {
 	}
 	
 	@Test
-	public void TestTransferTo() {
+	public void testTransferTo() {
 		Account account = new Account();
 		account.setId("0");
 		account.setName("account");
@@ -129,7 +150,7 @@ public class AccountTest {
 	}
 	
 	@Test
-	public void TestToString() {
+	public void testToString() {
 		Account account = new Account();
 		account.setId("0");
 		account.setName("account 0");

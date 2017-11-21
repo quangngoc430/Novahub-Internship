@@ -1,4 +1,4 @@
-package BT_2_1;
+package BT_2_2;
 
 public class Author {
 	private String name;

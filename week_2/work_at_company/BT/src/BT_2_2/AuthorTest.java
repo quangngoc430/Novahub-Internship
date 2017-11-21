@@ -1,4 +1,4 @@
-package BT_2_1;
+package BT_2_2;
 
 import static org.junit.Assert.assertEquals;
 

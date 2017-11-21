@@ -14,7 +14,13 @@ import org.junit.runners.Suite;
    BT_1_6.AccountTest.class,
    BT_1_7.DateTest.class,
    BT_1_8.TimeTest.class,
-   BT_2_1.AuthorTest.class
+   BT_2_1.AuthorTest.class,
+   BT_2_1.BookTest.class,
+   BT_2_2.AuthorTest.class,
+   BT_2_2.BookTest.class,
+   BT_2_7.CustomerTest.class,
+   BT_2_7.InvoiceTest.class,
+   BT_2_8.CustomerTest.class,
 })
 
 public class TestSuite {   
