@@ -20,7 +20,9 @@ import org.junit.runners.Suite;
    BT_2_2.BookTest.class,
    BT_2_7.CustomerTest.class,
    BT_2_7.InvoiceTest.class,
+   BT_2_8.AccountTest.class,
    BT_2_8.CustomerTest.class,
+   BT_3_4.MyTimeTest.class,
 })
 
 public class TestSuite {   
