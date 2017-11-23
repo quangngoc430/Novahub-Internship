@@ -11,7 +11,7 @@ public class MyDate {
 	public static boolean isLeapYear(int year) {
 		boolean output = false;
 		
-		if(year % 400 == 0 | (year % 4 == 0 && year % 100 != 0)) {
+		if((year % 400 == 0) | (year % 4 == 0 && year % 100 != 0)) {
 			output = true;
 		}
 		
@@ -27,16 +27,16 @@ public class MyDate {
 		else {
 			if(month == 2) {
 				if(isLeapYear(year) == true) {
-					if(day != 29)
+					if(!(day >= 1 && day <= 29))
 						output = false;
 				}
 				else {
-					if(day != 28)
+					if(!(day >= 1 && day <= 28))
 						output = false;
 				}
 			}
 			else {
-				if(daysInMonths[month - 1] != day) {
+				if(daysInMonths[month - 1] < day) {
 					output = false;
 					
 				}
@@ -79,39 +79,6 @@ public class MyDate {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-
-	public boolean validateDate(int year, int month, int day) {
-		boolean output = true;
-		
-		if(!(year >= 1 && year <= 9999)) {
-			output = false;
-		}
-		
-		if(!(month >= 1 && month <= 12)) {
-			output = false;
-		}
-		else {
-			if(month == 2) {
-				if(isLeapYear(year) == true) {
-					if(day > 29) {
-						output = false;
-					}
-				}
-				else {
-					if(day > 28) {
-						output = false;
-					}
-				}
-			}
-			else {
-				if(day > daysInMonths[month - 1]) {
-					output = false;
-				}
-			}
-		}
-		
-		return output;		
-	}
 	
 	public MyDate(int year, int month, int day) {
 		super();
@@ -119,13 +86,10 @@ public class MyDate {
 	}
 
 	public void setDate(int year, int month, int day) {
-		if(validateDate(year, month, day)) {
+		if(isValidDate(year, month, day)) {
 			this.year = year;
 			this.month = month;
 			this.day = day;
-		}
-		else {
-			System.out.println("Invalid year, month or day!");
 		}
 	}
 
@@ -143,7 +107,10 @@ public class MyDate {
 	}
 	
 	public void setYear(int year) {
-		this.year = year;
+		if(checkYear(year))
+			this.year = year;
+		else
+			System.out.println("Invalid year!");
 	}
 
 	public int getMonth() {
@@ -160,37 +127,21 @@ public class MyDate {
 	}
 	
 	public void setMonth(int month) {
-		this.month = month;
+		if(checkMonth(month))
+			this.month = month;
+		else
+			System.out.println("Invalid month!");
 	}
 
 	public int getDay() {
 		return day;
 	}
-
-	private boolean checkDay(int day, int month) {
-		boolean output = true;
-		
-		if(!(month >= 1 && month <= 12)) {
-			output = false;
-		}
-		else {
-			if(month == 2) {
-				if(day != 29) {
-					output = false;
-				}
-			}
-			else {
-				if(daysInMonths[month - 1] != day) {
-					output = false;
-				}
-			}
-		}
-		
-		return output;
-	}
 	
 	public void setDay(int day) {
-		this.day = day;
+		if(isValidDate(year, month, day))
+			this.day = day;
+		else 
+			System.out.println("Invalid day!");
 	}
 
 	@Override
@@ -276,19 +227,21 @@ public class MyDate {
 		if(year + 1 > 9999) {
 			System.out.println("Year out of range!");
 		}
-		else {
-			year++;
+		else {			
 			
 			if(isLeapYear(year) == true) {
-				if(month == 2 && day == 28) {
-					day = 29;
-				}
-			}
-			else {
 				if(month == 2 && day == 29) {
 					day = 28;
 				}
 			}
+			else {
+				if(month == 2 && day == 28) {
+					if(isLeapYear(year + 1) == true)
+						day = 29;
+				}
+			}
+			
+			year++;
 		}
 		
 		return this;
@@ -325,6 +278,7 @@ public class MyDate {
 				}
 				else {
 					day = daysInMonths[month - 2];
+					previousMonth();
 				}
 			}
 			else {
@@ -346,6 +300,7 @@ public class MyDate {
 			else {
 				if(day == daysInMonths[month - 1]) {
 					day = daysInMonths[month - 2];
+					
 				}
 			}
 			
@@ -363,19 +318,19 @@ public class MyDate {
 		if(year - 1 < 1) {
 			System.out.println("Year out of range!");
 		}
-		else {
-			year--;
-			
+		else {					
 			if(isLeapYear(year) == true) {
-				if(month == 2 && day == 28) {
-					day = 29;
-				}
-			}
-			else {
 				if(month == 2 && day == 29) {
 					day = 28;
 				}
 			}
+			else {
+				if(month == 2 && day == 28 && isLeapYear(year - 1) == true) {
+					day = 29;
+				}
+			}
+			
+			year--;
 		}
 		
 		return this;

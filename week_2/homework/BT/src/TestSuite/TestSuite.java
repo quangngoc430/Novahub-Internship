@@ -23,6 +23,7 @@ import org.junit.runners.Suite;
    BT_2_8.AccountTest.class,
    BT_2_8.CustomerTest.class,
    BT_3_4.MyTimeTest.class,
+   BT_3_5.MyDateTest.class,
 })
 
 public class TestSuite {   
