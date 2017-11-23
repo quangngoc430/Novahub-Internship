@@ -1,5 +1,8 @@
 package BT_4_2;
 
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
+
 public class Staff extends Person{
 	private String school;
 	private double pay;
@@ -33,7 +36,9 @@ public class Staff extends Person{
 
 	@Override
 	public String toString() {
-		return "Staff[Person[name=" + this.getName() + ",address=" + this.getAddress() + "],school=" + school + ",pay=" + pay + "]";
+		NumberFormat formatter = new DecimalFormat("#0.00");
+		
+		return "Staff[Person[name=" + this.getName() + ",address=" + this.getAddress() + "],school=" + school + ",pay=" + formatter.format(pay) + "]";
 	}
 	
 	

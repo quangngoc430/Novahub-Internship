@@ -26,6 +26,9 @@ import org.junit.runners.Suite;
    BT_3_5.MyDateTest.class,
    BT_4_1.CircleTest.class,
    BT_4_1.CylinderTest.class, 
+   BT_4_2.PersonTest.class,
+   BT_4_2.StaffTest.class,
+   BT_4_2.StudentTest.class,
    
 })
 
