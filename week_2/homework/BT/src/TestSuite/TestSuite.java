@@ -24,6 +24,9 @@ import org.junit.runners.Suite;
    BT_2_8.CustomerTest.class,
    BT_3_4.MyTimeTest.class,
    BT_3_5.MyDateTest.class,
+   BT_4_1.CircleTest.class,
+   BT_4_1.CylinderTest.class, 
+   
 })
 
 public class TestSuite {   
