@@ -40,6 +40,8 @@ public class ShapeTest {
   	
     assertEquals("red", shape.getColor());
     assertEquals(true, shape.isFilled());
+		assertEquals(0, shape.getPerimeter(), 2);
+		assertEquals(0, shape.getArea(), 2);
   }
   
   @Test
@@ -61,12 +63,16 @@ public class ShapeTest {
 		
 		assertEquals("pink", shape.getColor());
 		assertEquals(true, shape.isFilled());
+		assertEquals(0, shape.getPerimeter(), 2);
+		assertEquals(0, shape.getArea(), 2);
   }
   
   @Test
   public void testGetColor() {
 	
 		assertEquals("red", shape.getColor());
+		assertEquals(0, shape.getPerimeter(), 2);
+		assertEquals(0, shape.getArea(), 2);
   }
   
   @Test

@@ -41,6 +41,13 @@ import org.junit.runners.Suite;
    BT_6_1.CircleTest.class,
    BT_6_1.RectangleTest.class,
    BT_6_1.SquareTest.class,
+   BT_6_2.CatTest.class,
+   BT_6_2.DogTest.class,
+   BT_6_2.BigDogTest.class,
+   BT_6_4.CircleTest.class,
+   BT_6_4.ResizableCircleTest.class,
+   BT_8_1.MyIntStackTest.class,
+   
    
 })
 
