@@ -1,12 +1,13 @@
-package BT_4_5;
+package BT_6_1;
 
-public class Shape {
-	private String color = "red";
-	private boolean filled = true;
+public abstract class Shape {
+	protected String color;
+	protected boolean filled;
 	
 	public Shape() {
 		super();
-		// TODO Auto-generated constructor stub
+		this.color = "red";
+		this.filled = true;
 	}
 	
 	public Shape(String color, boolean filled) {
@@ -30,7 +31,11 @@ public class Shape {
 	public void setFilled(boolean filled) {
 		this.filled = filled;
 	}
-
+	
+	public abstract double getArea();
+	
+	public abstract double getPerimeter();
+	
 	@Override
 	public String toString() {
 		String output = "A Shape with color of " + color + " and ";

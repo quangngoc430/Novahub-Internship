@@ -1,4 +1,4 @@
-package BT_4_5;
+package BT_6_1;
 
 public class Square extends Rectangle{
 	

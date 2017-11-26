@@ -1,11 +1,11 @@
-package BT_4_5;
+package BT_6_1;
 
 public class Circle extends Shape{
-	private double radius = 1.0;
+	protected double radius;
 
 	public Circle() {
 		super();
-		// TODO Auto-generated constructor stub
+		this.radius = 1.0;
 	}
 
 	public Circle(double radius) {
@@ -26,10 +26,12 @@ public class Circle extends Shape{
 		this.radius = radius;
 	}
 	
+	@Override
 	public double getArea() {
 		return Math.PI * radius * radius;
 	}
 	
+	@Override
 	public double getPerimeter() {
 		return Math.PI * radius * 2;
 	}

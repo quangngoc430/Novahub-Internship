@@ -29,6 +29,18 @@ import org.junit.runners.Suite;
    BT_4_2.PersonTest.class,
    BT_4_2.StaffTest.class,
    BT_4_2.StudentTest.class,
+   BT_4_5.ShapeTest.class,
+   BT_4_5.CircleTest.class,
+   BT_4_5.RectangleTest.class,
+   BT_4_5.SquareTest.class,
+   BT_5_1.PointTest.class, 
+   BT_5_1.LineSubTest.class,
+   BT_5_2.CircleTest.class,
+   BT_5_2.CylinderTest.class,
+   BT_6_1.ShapeTest.class,
+   BT_6_1.CircleTest.class,
+   BT_6_1.RectangleTest.class,
+   BT_6_1.SquareTest.class,
    
 })
 
