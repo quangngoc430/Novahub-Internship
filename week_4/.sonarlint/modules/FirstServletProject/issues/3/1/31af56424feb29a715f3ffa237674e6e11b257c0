@@ -1,0 +1,13 @@
+
+csquid:S1989#"(Add a "try/catch" block for "getWriter".(ïô†úÿÿÿÿ8¬¤´»ƒ,HRMINORZVULNERABILITY
+rsquid:S1161"":Add the "@Override" annotation above this method signature(Ïû©Öûÿÿÿÿ8¬¤´»ƒ,H	RMAJORZ
+CODE_SMELL
+isquid:S1135"2Complete the task associated to this TODO comment.(ƒŠ® úÿÿÿÿ8¬¤´»ƒ,HRINFOZ
+CODE_SMELL
+·squid:S1186+"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(‹¨¯¿8Ğ¬Ò»ƒ,HRCRITICALZ
+CODE_SMELL
+msquid:S1161+":Add the "@Override" annotation above this method signature(‹¨¯¿8¬¤´»ƒ,H
+RMAJORZ
+CODE_SMELL
+‚squid:UselessImportCheck"BRemove this unused import 'javax.servlet.annotation.WebInitParam'.(µ¾åÀ8’…í»ƒ,H&RMINORZ
+CODE_SMELL
